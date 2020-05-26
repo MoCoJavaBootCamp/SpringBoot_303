@@ -25,13 +25,13 @@ public class HomeController {
     @GetMapping("/add")
     public String courseForm(Model model){
         model.addAttribute("course", new Course());
-        return "courseForm";
+        return "courseform";
     }
 
     @PostMapping("/process")
     public String processForm(@Valid Course course, BindingResult result) {
         if (result.hasErrors()) {
-            return "courseForm";
+            return "courseform";
         }
         courseRepository.save(course);
         return "redirect:/";

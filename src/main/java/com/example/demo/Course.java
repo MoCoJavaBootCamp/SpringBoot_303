@@ -11,6 +11,7 @@ import javax.validation.constraints.Size;
 
 @Entity
 public class Course {
+    @javax.persistence.Id
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
