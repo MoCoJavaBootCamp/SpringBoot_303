@@ -19,6 +19,7 @@ public class HomeController {
     @RequestMapping("/")
     public String listCourses(Model model){
         model.addAttribute("courses", courseRepository.findAll());
+        model.addAttribute("count", courseRepository.count());
         return "list";
     }
 

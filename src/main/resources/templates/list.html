@@ -9,6 +9,9 @@
 <tr th:if="${courses.size()} == 0">
     No courses yet.
 </tr><br />
+<tr th:if="${count} == 0">
+    No classes yet.
+</tr><br />
 <a href="/add">Add a Course</a>
 <table>
     <tr>
@@ -17,9 +20,7 @@
         <th>Credits</th>
         <th>Action</th>
     </tr>
-    <tr th:if="${count} == 0">
-        No classes yet.
-    </tr>
+
     <tr th:each="course : ${courses}">
         <td th:text="${course.title}"></td>
         <td th:text="${course.instructor}"></td>
